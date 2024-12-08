@@ -93,88 +93,162 @@ body {
 header h1 {
     font-size: 24px;
     color: #d92027;
-}
-
-.submit-question {
-    background-color: #d92027;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
     margin-bottom: 20px;
 }
 
+/* Styling af knappen til at indsende et spørgsmål */
+.submit-question {
+    background-color: #d92027; /* Pink farve til boksen/knappen */
+    color: white; /* Hvid tekstfarve */
+    border: none; /* Ingen kantlinje */
+    padding: 10px 20px; /* Indvendig afstand (top/bund: 10px, venstre/højre: 20px) */
+    font-size: 16px; /* Skriftstørrelse */
+    cursor: pointer; /* Markør ændres til en hånd, når man peger */
+    margin-bottom: 20px; /* Afstand under knappen */
+    border-radius: 20px; /* Afrunder hjørnerne med en radius på 20px */
+}
+
+/* Layout til spørgsmålene. Der bruges grid så det passer 100% */
 .questions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    margin-top: 200px; /* Flytter boksene længere ned på siden, så der er mere luft til den pinke skæve firkant */
+    display: grid; /* Grid-layout bruges til at arrangere/placere spørgsmålene */
+    grid-template-areas: /* Definerer layoutet med navngivne områder */
+            "q1 q1 q2" /* Første række: q1 strækker sig over 2 kolonner, q2 fylder én */
+        "q3 q4 q4" /* Anden række: q3 fylder én kolonne, q4 fylder 2 */
+        "q5 q5 q6" /* Tredje række: q5 fylder 2 kolonner, q6 fylder én */
+        "q7 q8 q8"; /* Fjerde række: q7 fylder én kolonne, q8 fylder 2 */
+    grid-gap: 15px; /* Afstand mellem boksene i gridet */
 }
 
+/* Styling for hver individuel spørgsmål-boks. Har oprettet dem seperat, da der har forskellig baggrundsfarve */
 .question {
-    background-color: #3a3a6e;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    flex: 1 1 calc(50% - 20px);
-    text-align: center;
+    background-color: #3a3a6e; /* Baggrundsfarve */
+    color: white; /* Hvid tekstfarve */
+    padding: 20px; /* Indvendig afstand inde i boksen */
+    border-radius: 25px; /* Afrundede hjørner med en radius på 25px */
+    text-align: center; /* Centrerer tekst inde i boksen */
+    cursor: pointer; /* Markør ændres til en hånd, når man peger */
 }
 
+//* Styling for det første spørgsmål (q1) */
+.questions .question:nth-child(1) /* nth-child bruges til at style et element baseret på dets placering blandt søskende med samme forælder.
+   Det tæller fra 1 og op og kan bruge specifikke tal, matematiske formler eller nøgleord som 'odd' og 'even'. */
+{
+    grid-area: q1;
+    height: 100px;
+    background-color: #103461; /* Lyserød-orange */
+}
+
+/* Styling for det andet spørgsmål (q2) */
+.questions .question:nth-child(2) {
+    grid-area: q2;
+    height: 100px;
+    background-color: #4678B6; /* Grøn */
+}
+
+/* Styling for det tredje spørgsmål (q3) */
+.questions .question:nth-child(3) {
+    grid-area: q3;
+    height: 80px;
+    background-color: #8692B0; /* Lyseblå */
+}
+
+/* Styling for det fjerde spørgsmål (q4) */
+.questions .question:nth-child(4) {
+    grid-area: q4;
+    height: 80px;
+    background-color: #5D6E9A; /* Lilla */
+}
+
+/* Styling for det femte spørgsmål (q5) */
+.questions .question:nth-child(5) {
+    grid-area: q5;
+    height: 100px;
+    background-color: #4678B6; /* Gul */
+}
+
+/* Styling for det sjette spørgsmål (q6) */
+.questions .question:nth-child(6) {
+    grid-area: q6;
+    height: 100px;
+    background-color: #8692B0; /* Rød */
+}
+
+/* Styling for det syvende spørgsmål (q7) */
+.questions .question:nth-child(7) {
+    grid-area: q7;
+    height: 80px;
+    background-color: #5D6E9A; /* Blå */
+}
+
+/* Styling for det ottende spørgsmål (q8) */
+.questions .question:nth-child(8) {
+    grid-area: q8;
+    height: 80px;
+    background-color: #103461; /* Turkis */
+}
+
+/* Styling for popup-vinduet */
 .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    position: fixed; /* Fast placering på skærmen */
+    top: 0; /* Starter øverst */
+    left: 0; /* Starter længst til venstre */
+    width: 100%; /* Fylder hele bredden af skærmen */
+    height: 100%; /* Fylder hele højden af skærmen */
+    background-color: rgba(0, 0, 0, 0.8); /* Halvgennemsigtig sort baggrund */
+    display: flex; /* Fleksibelt layout til at centrere indholdet */
+    justify-content: center; /* Centrerer indholdet horisontalt */
+    align-items: center; /* Centrerer indholdet vertikalt */
+    z-index: 1000; /* Viser popup'en øverst i lag */
 }
 
+/* Skjult popup, når den ikke bruges */
 .popup.hidden {
-    display: none;
+    display: none; /* Popup er skjult */
 }
 
+/* Styling af popup-indholdet */
 .popup-content {
-    background-color: #3a3a6e;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    width: 100%;
-    color: white;
-    position: relative;
+    background-color: #3a3a6e; /* Blå-lilla baggrundsfarve */
+    padding: 20px; /* Indvendig afstand */
+    border-radius: 25px; /* Afrundede hjørner med en radius på 25px */
+    max-width: 600px; /* Maksimal bredde for popup-vinduet */
+    width: 100%; /* Fylder op til 100% af den tilgængelige plads */
+    color: white; /* Hvid tekstfarve */
+    position: relative; /* Gør det muligt at placere barnet absolut */
 }
 
+/* Styling af lukkeknappen i popup-vinduet */
 .popup-content .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
+    position: absolute; /* Absolut positionering */
+    top: 10px; /* 10px fra toppen */
+    right: 10px; /* 10px fra højre */
+    font-size: 24px; /* Størrelse på lukkeknappen */
+    cursor: pointer; /* Markør ændres til en hånd ved hover */
 }
 
+/* Styling af kommentarsektionen i popup'en */
 .popup-comments {
-    margin: 20px 0;
-    max-height: 200px;
-    overflow-y: auto;
+    margin: 20px 0; /* Lodret afstand over og under kommentarsektionen */
+    max-height: 200px; /* Maksimal højde for scroll-sektionen */
+    overflow-y: auto; /* Tilføjer scroll, hvis indholdet overstiger højden */
 }
 
+/* Styling af inputfelt til kommentarer */
 .comment-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-    resize: none;
+    width: 100%; /* Fylder hele bredden */
+    padding: 10px; /* Indvendig afstand */
+    margin-bottom: 10px; /* Afstand under inputfeltet */
+    border-radius: 5px; /* Afrundede hjørner */
+    border: none; /* Ingen kant */
+    resize: none; /* Deaktiver resizing */
 }
 
+/* Styling af knappen til at indsende en kommentar */
 .submit-comment {
-    background-color: #d92027;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+    background-color: #d92027; /* Rød baggrundsfarve */
+    color: white; /* Hvid tekstfarve */
+    border: none; /* Ingen kant */
+    padding: 10px 20px; /* Indvendig afstand */
+    cursor: pointer; /* Markør ændres til en hånd ved hover */
 }
