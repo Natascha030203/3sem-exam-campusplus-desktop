@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus+</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<div class="faq-page">
+    <header>
+        <h1>Campus + Forum</h1>
+    </header>
+    <button class="submit-question">Indsend spørgsmål</button>
+    <div class="questions">
+        <div class="question">Hvad tid skal man ankomme?</div>
+        <div class="question">Hvor parkerer man?</div>
+        <div class="question">Får vi forplejning på dagen?</div>
+        <div class="question">Hvornår kommer eleverne?</div>
+        <div class="question">Må man selv medbringe mad & drikke?</div>
+        <div class="question">Har nogen erfaring med, hvor lang tid det tager at sætte ens stand op?</div>
+        <div class="question">Er der nogen der har en stav til en rollup, som jeg kan låne?</div>
+        <div class="question">Hvor mange elever plejer der at komme forbi ens stand ca.?</div>
+    </div>
+
+    <!-- Fået hjælp af chatGPT til pop up bokse -->
+    <!-- Popup Box -->
+    <div class="popup hidden">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <div class="popup-question">Får vi forplejning på dagen?</div>
+            <div class="popup-comments">
+                <p>Alice: Ja, Campus+ sørger for både mad og drikke :)</p>
+                <p>Jens: Jeps</p>
+                <p>Emma-sofie: Jeg undrede mig faktisk om det samme</p>
+            </div>
+            <textarea class="comment-input" placeholder="Skriv en kommentar..."></textarea>
+            <button class="submit-comment">Tilføj kommentar</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

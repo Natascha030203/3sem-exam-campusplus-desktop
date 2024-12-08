@@ -1,0 +1,180 @@
+/* Forside */
+
+
+/* Pink skæv forkant */
+.pink-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%; /* Bredde */
+    height: 380px; /* Højde */
+    margin-left: 40px; /* Skubber firkanten lidt til højre */
+    background-color: rgba(215, 132, 132, 0.8); /* Pink med gennemsigtighed. Farven er pink (215, 132, 132), og 0.8 angiver 80% opacitet og skaber derfor gennemsigtigheden */
+    clip-path: polygon(0 0, 60% 0, 40% 100%, 0% 100%);
+    /* Clip-path skaber en skæv form. Koordinaterne i polygon definerer hjørnerne:
+
+    0 0: Øverste venstre hjørne.
+    60% 0: Øverste højre hjørne på 60% af bredden.
+40% 100%: Nederste højre hjørne på 40% af bredden.
+0% 100%: Nederste venstre hjørne. */
+    z-index: -1; /* Sørger for, at firkanten er bag teksten */
+}
+
+/* Velkommen til "banderet" i lyserød */
+.velkommentil {
+    background-color: hotpink /* Boksfarven */
+    color: white; /* Tekstfarve */
+    border-radius: 0 20px 20px 0; /* Kun venstre side er afrundet */ /* Fået hjælp af chatGPT til at afrunde */
+    display: inline-block; /* Sørger for, at boksen tilpasser sig teksten */
+    font-size: 1.1rem; /* Størrelse på teksten */
+    margin-top: 30px;
+    margin-left: 250px;
+}
+
+
+/* Knapper */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Farver for knapper */
+.dinstand {
+    background-color: #103461;
+}
+
+.stempler {
+    background-color: #5D6E9A;
+}
+
+.evaluering {
+    background-color: #4678B6;
+}
+
+.forum {
+    background-color: #E9445F;
+}
+
+/* Hover-effekt */
+.button:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+/* Forum siden */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e;
+    color: white;
+}
+
+.faq-page {
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #d92027;
+}
+
+.submit-question {
+    background-color: #d92027;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.questions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.question {
+    background-color: #3a3a6e;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1 1 calc(50% - 20px);
+    text-align: center;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background-color: #3a3a6e;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    color: white;
+    position: relative;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup-comments {
+    margin: 20px 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+}
+
+.submit-comment {
+    background-color: #d92027;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
