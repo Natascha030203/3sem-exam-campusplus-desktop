@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata og links -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Campus+</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
-
 <body>
 
-
-<!-- Den pinke skæve firkant i toppen af siden. Er indsat her i toppen af dokumentet, så den vises øverst i dokumentet -->
+<!-- Pink skæve firkant øverst på siden -->
 <div class="pink-header"></div>
 
-<div class="pink-header"></div> <!-- Skæve forkant -->
+<!-- Container til hele sidens indhold -->
 <div class="container">
+
+    <!-- Header, der viser titel og årstal -->
     <header class="header">
+        <!-- Venstre sektion med titel og årstal -->
         <div class="left-section">
             <h1>Campus +</h1>
             <p>2025</p>
         </div>
+
+        <!-- Højre sektion med dekorativ tekst -->
         <div class="right-section">
             <div class="text-box">
                 CAMPUS+
@@ -28,13 +31,16 @@
         </div>
     </header>
 
+    <!-- Knap til at åbne popup til at indsende et nyt spørgsmål -->
+    <button id="add-question-button" class="submit-question">Indsend spørgsmål</button>
 
-<div class="faq-page">
-    <header>
-        <h1>Campus + Forum</h1>
-    </header>
-    <button class="submit-question">Indsend spørgsmål</button>
-    <div class="questions">
+    <div id="forum-questions" class="questions">
+        <!-- Dynamisk tilføjede spørgsmål vil blive placeret her -->
+    </div>
+
+    <!-- Sektion med eksisterende spørgsmål -->
+    <div id="forum-questions" class="questions">
+        <!-- Liste af spørgsmål -->
         <div class="question">Hvad tid skal man ankomme?</div>
         <div class="question">Hvor parkerer man?</div>
         <div class="question">Får vi forplejning på dagen?</div>
@@ -45,23 +51,41 @@
         <div class="question">Hvor mange elever plejer der at komme forbi ens stand ca.?</div>
     </div>
 
-    <!-- Fået hjælp af chatGPT til pop up bokse -->
-    <!-- Popup Box -->
+    <!-- Popup-boks til at indsende et nyt spørgsmål -->
+    <div id="add-question-popup" class="popup hidden">
+        <div class="popup-content">
+            <!-- Luk-knap til popup -->
+            <span class="close">&times;</span>
+            <!-- Tekstfelt til nyt spørgsmål -->
+            <textarea id="question-input" class="comment-input" placeholder="Skriv dit spørgsmål her..."></textarea>
+            <!-- Knap til at indsende spørgsmålet -->
+            <button id="submit-question" class="submit-comment">Tilføj spørgsmål</button>
+        </div>
+    </div>
+
+    <!-- Popup-boks til at vise detaljer om et spørgsmål -->
     <div class="popup hidden">
         <div class="popup-content">
+            <!-- Luk-knap til popup -->
             <span class="close">&times;</span>
+            <!-- Teksten på det valgte spørgsmål -->
             <div class="popup-question">Får vi forplejning på dagen?</div>
+            <!-- Liste af kommentarer til spørgsmålet -->
             <div class="popup-comments">
                 <p>Alice: Ja, Campus+ sørger for både mad og drikke :)</p>
                 <p>Jens: Jeps</p>
                 <p>Emma-sofie: Jeg undrede mig faktisk om det samme</p>
             </div>
+            <!-- Tekstfelt til at tilføje en ny kommentar -->
             <textarea class="comment-input" placeholder="Skriv en kommentar..."></textarea>
+            <!-- Knap til at indsende kommentaren -->
             <button class="submit-comment">Tilføj kommentar</button>
         </div>
     </div>
-</div>
 
+</div> <!-- Slut på container -->
+
+<!-- Link til ekstern JavaScript-fil -->
 <script src="script.js"></script>
 </body>
 </html>

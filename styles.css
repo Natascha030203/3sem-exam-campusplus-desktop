@@ -22,7 +22,7 @@
 
 /* Velkommen til "banderet" i lyserød */
 .velkommentil {
-    background-color: hotpink /* Boksfarven */
+    background-color: #E9445F /* Boksfarven */
     color: white; /* Tekstfarve */
     border-radius: 0 20px 20px 0; /* Kun venstre side er afrundet */ /* Fået hjælp af chatGPT til at afrunde */
     display: inline-block; /* Sørger for, at boksen tilpasser sig teksten */
@@ -94,6 +94,97 @@ header h1 {
     font-size: 24px;
     color: #d92027;
     margin-bottom: 20px;
+}
+
+/* Generelle pop op-stilarter */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Gennemsigtig baggrund */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Skjuler pop op-boksen */
+.hidden {
+    display: none;
+}
+
+/* Indholdet i pop op-boksen */
+.popup-content {
+    background-color: rgba(255, 192, 203, 0.9); /* Lyserød farve med gennemsigtighed */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Luk-knappen */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Tekstfelt */
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none; /* Forhindrer manuel resizing */
+    margin-bottom: 15px;
+}
+
+/* Tilføj spørgsmål-knap */
+.add-question-btn {
+    background-color: #ff4081;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+/* Submit-knap */
+.submit-comment {
+    background-color: #ff4081;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Forumspørgsmål */
+.forum-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.question {
+    background-color: #d0e7ff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 0 1 calc(33.333% - 10px);
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Styling af knappen til at indsende et spørgsmål */
@@ -251,4 +342,114 @@ header h1 {
     border: none; /* Ingen kant */
     padding: 10px 20px; /* Indvendig afstand */
     cursor: pointer; /* Markør ændres til en hånd ved hover */
+}
+
+
+
+
+
+
+
+
+
+
+/* Din stand side */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #103461; /* Baggrundsfarve */
+    color: white; /* Tekstfarve */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Formular-styling */
+form {
+    max-width: 1200px; /* Maksimal bredde. Har indsat dette, da det så meget voldsomt ud, at det fyldte hele siden, så nu er der luft på begge sider og det er samlet mere på midten. */
+    margin: 0 auto; /* Centrer formularen */
+    background-color: #103461; /* Baggrundsfarve til formular. Gør den samme farve som baggrundsfarven, så dette ikke er en anden farve. */
+    padding: 20px;
+    border-radius: 8px; /* Runde hjørner */
+}
+
+/* Styling til labels */
+label {
+    display: block; /* Labels på egen linje */
+    margin-bottom: 5px;
+    font-weight: bold; /* Fed tekst */
+}
+
+/* Styling til inputfelter, textarea og knapper */
+input, textarea, button {
+    width: 100%; /* Fyld hele bredden */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Flex-container til valgknapper */
+.choice {
+    display: flex;
+    gap: 10px; /* Afstand mellem knapper */
+}
+
+/* Styling til valgknapper */
+.choice-btn {
+    background-color: #556789; /* Farven til ja/nej knapperne */
+    color: white; /* Tekstfarve */
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 40px; /* Runde hjørner */
+    flex-grow: 1; /* Knapper fylder ligeligt */
+    text-align: center;
+}
+
+/* Styling til farvevalg */
+.color-selection {
+    display: flex;
+    gap: 10px; /* Afstand mellem farveknapper */
+    margin-bottom: 15px;
+}
+
+/* Styling til farveknapper */
+.color-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer; /* Gør at musen bliver til en hånd når ma kører den over knappen */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Aktiv tilstand - brugeren har markeret knappen */
+.color-btn.active {
+    background-color: #F898A8; /* Ny baggrundsfarve */
+    border-color: black;
+    transform: scale(1.2); /* Gør at knappen bliver større når man trykker på den. Ændres scale tallet justeres størrelsen. */
+
+}
+
+/* Hvis brugeren holder musen nede */
+.color-btn:active {
+    background-color: deeppink; /* Midlertidig farve ved klik */
+}
+
+/* Styling til textarea */
+textarea {
+    resize: none; /* Ingen ændring af størrelse */
+}
+
+/* Styling til knapper */
+button {
+    cursor: pointer;
+    background-color: #4678B6; /* Gem knappens farve før man trykker på den. Blå */
+    color: white;
+    font-weight: bold;
+}
+
+/* Hover-effekt til knapper */
+button:hover {
+    background-color: #F898A8; /* Gør, at når man trykket på en knap bliver knappen lyserød */
 }

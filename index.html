@@ -38,6 +38,33 @@
         Velkommen til årets sjoveste dag for de studerende!
     </div>
 
+
+
+    <!-- Knappen der åbner "Indsend spørgsmål"-pop op-boksen -->
+    <button id="add-question-button" class="add-question-btn">Indsend spørgsmål</button>
+
+    <!-- "Indsend spørgsmål"-pop op-boks -->
+    <div id="add-question-popup" class="popup hidden">
+        <div class="popup-content">
+            <!-- Luk-knap -->
+            <button class="close">&times;</button>
+            <h2>Del dit spørgsmål med forum</h2>
+            <!-- Tekstfelt til spørgsmål -->
+            <textarea id="question-input" class="comment-input" placeholder="Skriv dit spørgsmål her..." rows="1"></textarea>
+            <!-- Knappen til at indsende spørgsmål -->
+            <button id="submit-question" class="submit-comment">Indsend</button>
+        </div>
+    </div>
+
+    <!-- Forum container, hvor spørgsmål bliver tilføjet -->
+    <div id="forum-questions" class="forum-container">
+        <!-- Spørgsmål bliver tilføjet dynamisk her -->
+    </div>
+
+
+
+
+
     <!-- Buttons/knapper -->
     <div class="buttons">
         <div class="button dinstand">Din stand</div>

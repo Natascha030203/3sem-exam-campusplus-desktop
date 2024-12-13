@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stand Tilmelding</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Den pinke skæve firkant i toppen af siden. Er indsat her i toppen af dokumentet, så den vises øverst i dokumentet -->
+<div class="pink-header"></div>
+
+<div class="pink-header"></div> <!-- Skæve forkant -->
+<div class="container">
+    <header class="header">
+        <div class="left-section">
+            <h1>Campus +</h1>
+            <p>2025</p>
+        </div>
+        <div class="right-section">
+            <div class="text-box">
+                CAMPUS+
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+<form id="tilmelding-form">
+
+    <!-- Inputfelt til virksomhedsnavn -->
+    <label for="virksomhed">Navn på virksomhed/uddannelse/forening:</label>
+    <input type="text" id="virksomhed" name="virksomhed" required>
+
+    <!-- Inputfelt til kontaktoplysninger -->
+    <label for="kontaktoplysninger">Kontaktoplysninger på tilmelder/ansvarlig for standen:</label>
+    <input type="text" id="kontaktoplysninger" name="kontaktoplysninger" required>
+
+    <!-- Inputfelt til antal standpladser -->
+    <label for="standpladser">Hvor mange standpladser skal I bruge?</label>
+    <input type="number" id="standpladser" name="standpladser" required>
+
+    <!-- Inputfelt til antal standholdere -->
+    <label for="standholdere">Hvor mange standholdere skal I bruge?</label>
+    <input type="number" id="standholdere" name="standholdere" required>
+
+    <!-- Inputfelt til frokost -->
+    <label>Ønsker I frokost og hvor mange?</label>
+    <!-- Valgknapper til Ja/Nej -->
+    <div class="choice">
+        <button type="button" class="choice-btn" id="frokost-ja">Ja</button>
+        <button type="button" class="choice-btn" id="frokost-nej">Nej</button>
+    </div>
+    <!-- Felt til antal frokoster (vises kun, hvis "Ja" vælges) -->
+    <div id="frokost-antal-container" style="display: none;">
+        <label for="frokost-antal">Antal frokoster:</label>
+        <input type="number" id="frokost-antal" name="frokost-antal">
+    </div>
+
+    <!-- Spørgsmål om standplacering -->
+    <label>Ønske om standplacering? Klik på farven:</label>
+    <div class="color-selection">
+        <!-- Farveknapper til valg af placering -->
+        <button type="button" class="color-btn" style="background-color: #F898A8;" data-color="lysered"></button>
+        <button type="button" class="color-btn" style="background-color: #103461;" data-color="navy"></button>
+        <button type="button" class="color-btn" style="background-color: #4678B6;" data-color="lyseblå"></button>
+        <button type="button" class="color-btn" style="background-color: #8692B0;" data-color="grå"></button>
+        <button type="button" class="color-btn" style="background-color: #E8445F;" data-color="pink"></button>
+    </div>
+
+    <!-- Billede af kort over pladsen med markeringer til de forskellige zoner -->
+    <img src="Skærmbillede%202024-12-09%20kl.%2009.59.56.png" alt="Beskrivelse af billedet" width="300">
+
+    <!-- Spørgsmål om strøm -->
+    <label>Har I brug for strøm?</label>
+
+    <!-- Valgknapper til Ja/Nej -->
+    <div class="choice">
+        <button type="button" class="choice-btn" id="strom-ja">Ja</button>
+        <button type="button" class="choice-btn" id="strom-nej">Nej</button>
+    </div>
+
+    <!-- Beskrivelse af standen -->
+    <label for="standbeskrivelse">Beskriv jeres stand:</label>
+    <textarea id="standbeskrivelse" name="standbeskrivelse" rows="5"></textarea>
+
+    <!-- Beskrivelse af aktiviteter -->
+    <label for="aktiviteter">Beskriv aktiviteten/aktiviteterne:</label>
+    <textarea id="aktiviteter" name="aktiviteter" rows="2"></textarea>
+
+    <!-- Inputfelt til betalingsoplysninger -->
+    <label for="mobilepay">En betalingsknap evt MobilePay:</label>
+    <input type="text" id="mobilepay" name="mobilepay">
+
+    <!-- Gem-knap -->
+    <button type="submit" id="gem-knap">Gem</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>

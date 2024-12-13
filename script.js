@@ -1,109 +1,134 @@
-// Javascript til forum siderne
 document.addEventListener("DOMContentLoaded", () => {
-    const questions = document.querySelectorAll(".question");
-    const popup = document.querySelector(".popup");
-    const popupContent = document.querySelector(".popup-content");
-    const popupQuestion = document.querySelector(".popup-question");
-    const closeBtn = document.querySelector(".close");
-    const commentInput = document.querySelector(".comment-input");
-    const submitCommentBtn = document.querySelector(".submit-comment");
-    const commentsContainer = document.querySelector(".popup-comments");
+    // Referencer til elementer
+    const addQuestionButton = document.getElementById("add-question-button"); // "Indsend spørgsmål"-knap
+    const addQuestionPopup = document.getElementById("add-question-popup"); // Pop op-boks
+    const closePopupButton = addQuestionPopup.querySelector(".close"); // Luk-knap i pop op-boksen
+    const questionInput = document.getElementById("question-input"); // Tekstfelt i pop op-boksen
+    const submitQuestionButton = document.getElementById("submit-question"); // "Tilføj spørgsmål"-knap
+    const forumQuestionsContainer = document.getElementById("forum-questions"); // Beholder til spørgsmål
 
-    // Gør at det popper frem, når man trykker på en af spørgsmålene
-    questions.forEach((question) => {
-        question.addEventListener("click", () => {
-            popupQuestion.textContent = question.textContent;
-            popup.classList.remove("hidden");
+    // Åbn pop op-boksen, når "Indsend spørgsmål"-knappen klikkes
+    addQuestionButton.addEventListener("click", () => {
+        addQuestionPopup.classList.remove("hidden"); // Vis pop op-boksen
+    });
+
+    // Luk pop op-boksen, når man klikker på luk-knappen eller uden for boksen
+    addQuestionPopup.addEventListener("click", (e) => {
+        if (e.target === addQuestionPopup || e.target === closePopupButton) {
+            addQuestionPopup.classList.add("hidden"); // Skjul pop op-boksen
+        }
+    });
+
+    // Håndter indsendelse af spørgsmål
+    submitQuestionButton.addEventListener("click", () => {
+        const questionText = questionInput.value.trim(); // Hent tekstfeltets indhold
+        if (questionText) {
+            // Opret et nyt spørgsmål
+            const newQuestion = document.createElement("div");
+            newQuestion.classList.add("question");
+            newQuestion.textContent = questionText;
+
+            // Tilføj pop op-adfærd for det nye spørgsmål
+            newQuestion.addEventListener("click", () => {
+                const popup = document.querySelector(".popup.hidden"); // Find popup
+                const popupQuestion = popup.querySelector(".popup-question");
+                popupQuestion.textContent = questionText; // Sæt spørgsmålsteksten i popup'en
+                popup.classList.remove("hidden"); // Vis popup
+            });
+
+            // Tilføj spørgsmålet til containeren
+            forumQuestionsContainer.appendChild(newQuestion);
+
+            // Ryd tekstfeltet og luk pop op-boksen
+            questionInput.value = "";
+            addQuestionPopup.classList.add("hidden");
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+// Javascript til din stand side.
+document.addEventListener("DOMContentLoaded", () => {
+    // Håndter frokostvalg (Ja/Nej)
+    const frokostJa = document.getElementById("frokost-ja");
+    const frokostNej = document.getElementById("frokost-nej");
+    const frokostAntalContainer = document.getElementById("frokost-antal-container");
+
+    frokostJa.addEventListener("click", () => {
+        // Marker "Ja" som valgt
+        frokostJa.classList.add("active");
+        frokostNej.classList.remove("active");
+        // Vis feltet til antal frokoster
+        frokostAntalContainer.style.display = "block";
+    });
+
+    frokostNej.addEventListener("click", () => {
+        // Marker "Nej" som valgt
+        frokostNej.classList.add("active");
+        frokostJa.classList.remove("active");
+        // Skjul feltet til antal frokoster
+        frokostAntalContainer.style.display = "none";
+    });
+
+// Vælg alle farveknapper. Her styres det, at når man trykker på en knap ændres farven.
+    const colorButtons = document.querySelectorAll(".color-btn");
+
+    let selectedButtons = []; // Holder styr på valgte knapper
+
+    colorButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Hvis knappen allerede er valgt
+            if (button.classList.contains("active")) {
+                button.classList.remove("active"); // Fjern markeringen
+                selectedButtons = selectedButtons.filter(btn => btn !== button); // Fjern fra listen
+            } else {
+                // Hvis der er færre end 2 valgte knapper
+                if (selectedButtons.length < 2) {
+                    button.classList.add("active"); // Marker knappen
+                    selectedButtons.push(button); // Tilføj til listen
+                }
+            }
         });
     });
 
-    // Gør at det der er poppet frem forsvinder hvis man trykker på det eller ved siden af pop op boksen
-    popup.addEventListener("click", (e) => {
-        if (e.target === popup || e.target === closeBtn) {
-            popup.classList.add("hidden");
-        }
+    // Håndter strømvalg (Ja/Nej)
+    const stromJa = document.getElementById("strom-ja");
+    const stromNej = document.getElementById("strom-nej");
+
+    stromJa.addEventListener("click", () => {
+        // Marker "Ja" som valgt
+        stromJa.classList.add("active");
+        stromNej.classList.remove("active");
     });
 
-    // f
-    submitCommentBtn.addEventListener("click", () => {
-        const commentText = commentInput.value.trim();
-        if (commentText) {
-            const newComment = document.createElement("p");
-            newComment.textContent = `Du: ${commentText}`;
-            commentsContainer.appendChild(newComment);
-            commentInput.value = ""; // Clear the input
-        }
+    stromNej.addEventListener("click", () => {
+        // Marker "Nej" som valgt
+        stromNej.classList.add("active");
+        stromJa.classList.remove("active");
     });
-});
 
+    // Håndter gem-knappen
+    const form = document.getElementById("tilmelding-form");
+    form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Forhindrer standard formularindsendelse
 
-// Nedenstående gør, at pop op boksen bliver i den farve, som det spørgsmål man trykkede på er i
-// Alle spørgsmål og pop op-elementer
-const questions = document.querySelectorAll('.question');
-const popup = document.querySelector('.popup');
-const popupContent = document.querySelector('.popup-content');
+        // Saml alle formularens data
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        data.selectedColors = selectedColors;
 
+        console.log("Gemte data:", data); // Log data til konsollen
 
-questions.forEach(question => {
-    question.addEventListener('click', () => {
-        // Henter baggrundsfarven på det klikbare spørgsmål
-        const questionColor = window.getComputedStyle(question).backgroundColor;
-
-        // Sæt pop op-boksen til samme farve
-        popupContent.style.backgroundColor = questionColor;
-
-        // Vis pop op-boksen
-        popup.classList.remove('hidden');
-    });
-});
-
-// Luk pop op-boksen, når man klikker på "close" eller udenfor boksen
-document.querySelector('.close').addEventListener('click', () => {
-    popup.classList.add('hidden');
-});
-
-popup.addEventListener('click', (event) => {
-    if (event.target === popup) {
-        popup.classList.add('hidden');
-    }
-});
-
-
-// Gør at pop up boksen popper op i den farve som spørgsmålet man trykkede på er
-questions.forEach(question => {
-    question.addEventListener('click', () => {
-        // Henter baggrundsfarven fra det klikkede spørgsmål
-        const questionColor = window.getComputedStyle(question).backgroundColor;
-
-        // pop op-boksens farve
-        popupContent.style.backgroundColor = questionColor;
-
-        // Knappen "tilføj kommentar"s farve
-        const submitCommentButton = document.querySelector('.submit-comment');
-        submitCommentButton.style.backgroundColor = questionColor;
-
-        // Vis pop op-boksen
-        popup.classList.remove('hidden');
-    });
-});
-
-
-
-// Laver hvid stroke/kant omkring "tilføj kommentar" knappen i pop up boksen
-questions.forEach(question => {
-    question.addEventListener('click', () => {
-        // Henter baggrundsfarven fra spørgsmålet
-        const questionColor = window.getComputedStyle(question).backgroundColor;
-
-        // Pop op-boksens farve
-        popupContent.style.backgroundColor = questionColor;
-
-        // Sætter knappen "tilføj kommentar"s farve og hvid kant
-        const submitCommentButton = document.querySelector('.submit-comment');
-        submitCommentButton.style.backgroundColor = questionColor;
-        submitCommentButton.style.border = '2px solid white'; // Hvid kant
-
-        // Vis pop op-boksen
-        popup.classList.remove('hidden');
+        // Redirect til forsiden
+        window.location.href = "index.html";
     });
 });
