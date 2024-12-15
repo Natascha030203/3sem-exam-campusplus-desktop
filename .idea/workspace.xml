@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2303821c-56e6-4ec3-a9eb-af7f0cd6e997" name="Changes" comment="Din stand side er igang med at blive kodet. Er ikke færdig men er godt på vej">
+      <change afterPath="$PROJECT_DIR$/forside.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opretdig.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2303821c-56e6-4ec3-a9eb-af7f0cd6e997" name="Changes" comment="" />
+      <created>1733399926001</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733399926001</updated>
+      <workItem from="1733399927090" duration="24528000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added viewport">
+      <option name="closed" value="true" />
+      <created>1733400182505</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733400182505</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Status søndag. Godt igang med forside og forum side. &#10;&#10;&#10;Mangler en del styling og finpudsning, men det er lykkedes at skabe en pop up boks. Det er lykkedes af lave den skæve lyserøde firkant i toppen.&#10;&#10;Indtil viderede benytter jeg javascript til forum siden, som er det der gør at boksen popper frem og tilbage. Der er kommentarer til det">
+      <option name="closed" value="true" />
+      <created>1733663506743</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733663506743</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Forum side: Nu er det lykkedes, at pop op boksene popper op i den farve som knappen/spørgsmålet var. Og nu fået &quot;Tilføj kommentar&quot; knappen i pop op boksen til også at poppe op i samme farve som spørgsmålet og derfor tilføjet hvid stroke omkring knappen, så den er synlig.">
+      <option name="closed" value="true" />
+      <created>1733682993559</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733682993559</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Din stand side er igang med at blive kodet. Er ikke færdig men er godt på vej">
+      <option name="closed" value="true" />
+      <created>1734088741491</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734088741491</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added viewport" />
+    <MESSAGE value="Status søndag. Godt igang med forside og forum side. &#10;&#10;&#10;Mangler en del styling og finpudsning, men det er lykkedes at skabe en pop up boks. Det er lykkedes af lave den skæve lyserøde firkant i toppen.&#10;&#10;Indtil viderede benytter jeg javascript til forum siden, som er det der gør at boksen popper frem og tilbage. Der er kommentarer til det" />
+    <MESSAGE value="Forum side: Nu er det lykkedes, at pop op boksene popper op i den farve som knappen/spørgsmålet var. Og nu fået &quot;Tilføj kommentar&quot; knappen i pop op boksen til også at poppe op i samme farve som spørgsmålet og derfor tilføjet hvid stroke omkring knappen, så den er synlig." />
+    <MESSAGE value="Din stand side er igang med at blive kodet. Er ikke færdig men er godt på vej" />
+    <option name="LAST_COMMIT_MESSAGE" value="Din stand side er igang med at blive kodet. Er ikke færdig men er godt på vej" />
+  </component>
+</project>
