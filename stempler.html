@@ -10,8 +10,79 @@
 
 
 <body>
+<style>
+    body {
+        background-color: #5D6E9A; /* Baggrundsfarve */  } /* Denne kommentar er lavet som en css, da det er styling */
+</style>
+
+<!-- Den pinke skæve firkant i toppen af siden. Er indsat her i toppen af dokumentet, så den vises øverst i dokumentet -->
+<div class="pink-header"></div>
+
+<div class="pink-header"></div> <!-- Skæve forkant -->
+<div class="container">
+    <header class="header">
+        <div class="left-section">
+            <h1>Campus +</h1>
+            <p>2025</p>
+        </div>
+        <div class="right-section">
+            <div class="text-box">
+                CAMPUS+
+            </div>
+        </div>
+    </header>
 
 
-<script src="script.js"></script>
+<!-- Knapper -->
+<div class="button-container2">
+    <button class="zone-button2 gray" onclick="showPopup('gray')">Grå zone</button>
+    <button class="zone-button2 light-blue" onclick="showPopup('light-blue')">Lyseblå zone</button>
+    <button class="zone-button2 dark-blue" onclick="showPopup('dark-blue')">Mørkeblå zone</button>
+    <button class="zone-button2 pink" onclick="showPopup('pink')">Lyserød zone</button>
+    <button class="zone-button2 red" onclick="showPopup('red')">Rød zone</button>
+</div>
+
+<!-- Popups til QR-koder -->
+<div id="gray" class="popup5">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('gray')">&times;</span>
+        <h2>Grå zone</h2>
+        <img src="qr.png" alt="QR kode for Grå zone">
+    </div>
+</div>
+
+<div id="light-blue" class="popup5">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('light-blue')">&times;</span>
+        <h2>Lyseblå zone</h2>
+        <img src="qr.png" alt="QR kode for Lyseblå zone">
+    </div>
+</div>
+
+<div id="dark-blue" class="popup5">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('dark-blue')">&times;</span>
+        <h2>Mørkeblå zone</h2>
+        <img src="qr.png" alt="QR kode for Mørkeblå zone">
+    </div>
+</div>
+
+<div id="pink" class="popup5">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('pink')">&times;</span>
+        <h2>Lyserød zone</h2>
+        <img src="qr.png" alt="QR kode for Lyserød zone">
+    </div>
+</div>
+
+<div id="red" class="popup5">
+    <div class="popup-content5">
+        <span class="close" onclick="closePopup('red')">&times;</span>
+        <h2>Rød zone</h2>
+        <img src="qr.png" alt="QR kode for Rød zone">
+    </div>
+</div>
+
+<script src="script.js"></script> <!-- Forbinder JavaScript-filen -->
 </body>
 </html>

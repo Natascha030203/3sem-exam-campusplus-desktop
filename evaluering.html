@@ -3,10 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Campus+</title>
+    <title>Evaluering</title>
     <link rel="stylesheet" href="styles.css">
 
 </head>
+
+
+<!-- Den pinke skæve firkant i toppen af siden. Er indsat her i toppen af dokumentet, så den vises øverst i dokumentet -->
+<div class="pink-header"></div>
+
+<div class="pink-header"></div> <!-- Skæve forkant -->
+<div class="container">
+    <header class="header">
+        <div class="left-section">
+            <h1>Campus +</h1>
+            <p>2025</p>
+        </div>
+        <div class="right-section">
+            <div class="text-box">
+                CAMPUS+
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <!-- Har givet alle containers osv et 4-tal til sidst, for at holde styr på styilingen i css, da der allerede er containers osv -->
+<div class="container4">
+    <!-- Spørgsmål 1 -->
+    <h3>Hvordan oplevede du overordnet CAMPUS+ dagen?</h3>
+    <div class="options4" id="q14">
+        <button onclick="selectOption4(this)">Rigtig god</button>
+        <button onclick="selectOption4(this)">God</button>
+        <button onclick="selectOption4(this)">Dårlig</button>
+        <button onclick="selectOption4(this)">Mindre god</button>
+    </div>
+
+    <!-- Spørgsmål 2 -->
+    <h3>Hvilken zone var I placeret i?</h3>
+    <div class="options4" id="q24">
+        <button onclick="selectOption4(this)">RØD Zone (Kulturtorvet)</button>
+        <button onclick="selectOption4(this)">BLÅ Zone (Køge Torv)</button>
+        <button onclick="selectOption4(this)">PINK Zone (Køge Torv)</button>
+        <button onclick="selectOption4(this)">GUL Zone (Nørregade)</button>
+        <button onclick="selectOption4(this)">GRØN Zone (Stationspladsen)</button>
+    </div>
+
+    <!-- Spørgsmål 3 -->
+    <h3>Har I deltaget i CAMPUS+ før?</h3>
+    <div class="options4" id="q34">
+        <button onclick="selectOption4(this)">Ja, vi har været med flere gange</button>
+        <button onclick="selectOption4(this)">Ja, vi har været med 1 gang før</button>
+        <button onclick="selectOption4(this)">Nej, 2024 var vores første år</button>
+    </div>
+
+    <!-- Spørgsmål 4 -->
+    <h3>Hvordan har du hørt om CAMPUS+?</h3>
+    <div class="options4" id="q44">
+        <button onclick="selectOption4(this)">Blev kontaktet af CAMPUS Køge (e-mail/telefon)</button>
+        <button onclick="selectOption4(this)">Facebook/Instagram</button>
+        <button onclick="selectOption4(this)">LinkedIn</button>
+        <button onclick="selectOption4(this)">Avisen</button>
+        <button onclick="selectOption4(this)">Netværk</button>
+    </div>
+    <textarea id="andet4" placeholder="Andet - Skriv her..." oninput="resizeTextarea4(this)"></textarea>
+
+    <!-- Slider -->
+    <h3>Hvor let synes du, det var at forstå, hvad der skulle ske på CAMPUS+ dagen?</h3>
+    <div class="slider-container4">
+        <input type="range" min="1" max="10" value="5" class="slider4" id="slider4" oninput="updateSliderValue4()">
+        <div class="slider-value4" id="slider-value4">5</div>
+    </div>
+
+    <!-- Gem knap -->
+    <button class="save-btn4" onclick="saveAndRedirect4()">Gem</button>
+</div>
+
 
 <body>
 

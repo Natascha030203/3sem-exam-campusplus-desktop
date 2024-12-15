@@ -1,6 +1,4 @@
-/* ===========================
-   Forside, login og opret dig side
-   =========================== */
+// Har fået hjælp af chat GPT til størstedelen af javascripten
 
 /**
  * Denne funktion navigerer til en ny side ved at ændre URL'en.
@@ -11,9 +9,7 @@ function goToPage(page) {
     window.location.href = page;
 }
 
-/* ===========================
-   EKSTRA: VALIDERING AF FORMULAR
-   =========================== */
+
 
 // Tilføjer event listener til formularen på login-siden
 document.addEventListener("DOMContentLoaded", function () {
@@ -114,6 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+
 // Javascript til din stand side.
 document.addEventListener("DOMContentLoaded", () => {
     // Håndter frokostvalg (Ja/Nej)
@@ -190,3 +188,67 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "index.html";
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Javascript til evalueringssiden
+// Funktion til at markere en valgt knap
+function selectOption4(button) {
+    const parent = button.parentElement;
+    const buttons = parent.querySelectorAll("button");
+    buttons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
+}
+
+// Funktion til automatisk ændring af tekstfelt-størrelse
+function resizeTextarea4(textarea) {
+    textarea.style.height = "auto";
+    textarea.style.height = textarea.scrollHeight + "px";
+}
+
+// Funktion til at opdatere sliderens værdi
+function updateSliderValue4() {
+    const slider = document.getElementById("slider4");
+    const sliderValue = document.getElementById("slider-value4");
+    sliderValue.textContent = slider.value;
+}
+
+// Funktion til at gemme og omdirigere
+function saveAndRedirect4() {
+    alert("Tak for din feedback!");
+    window.location.href = "index.html";
+}
+
+
+
+
+
+
+
+
+
+
+// Stempler siden
+// Funktion til at vise popup
+function showPopup(id) {
+    document.getElementById(id).style.display = "block";
+}
+
+// Funktion til at lukke popup
+function closePopup(id) {
+    document.getElementById(id).style.display = "none";
+}

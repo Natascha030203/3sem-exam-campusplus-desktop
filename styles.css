@@ -36,9 +36,7 @@ body {
     min-height: 100vh; /* Sørger for, at indholdet fylder hele højden af viewport */
 }
 
-/* ===========================
-   MAIN CONTAINER
-   =========================== */
+
 .container8 {
     background-color: #6F7CA6; /* En mørkere baggrund til indholdet */
     padding: 20px; /* Indre afstand inde i boksen */
@@ -49,16 +47,12 @@ body {
     max-width: 800px; /* Sætter en maksimal bredde for større skærme */
 }
 
-/* ===========================
-   HEADINGS
-   =========================== */
+
 h1, h2 {
     margin-bottom: 20px; /* Lægger afstand under overskrifter */
 }
 
-/* ===========================
-   BUTTON STYLING
-   =========================== */
+
 button {
     background-color: #5865f2; /* Primær blå farve til knapper */
     color: #fff; /* Hvid tekstfarve */
@@ -125,11 +119,10 @@ input::placeholder {
 .pink-header {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 80%; /* Bredde */
-    height: 380px; /* Højde */
-    margin-left: 40px; /* Skubber firkanten lidt til højre */
-    background-color: rgba(215, 132, 132, 0.8); /* Pink med gennemsigtighed. Farven er pink (215, 132, 132), og 0.8 angiver 80% opacitet og skaber derfor gennemsigtigheden */
+    left: 180px;
+    width: 50%; /* Bredde */
+    height: 500px; /* Højde */
+    background-color: rgba(233, 68, 95, 0.51); /* Pink med gennemsigtighed. Farven er pink (215, 132, 132), og 0.8 angiver 80% opacitet og skaber derfor gennemsigtigheden */
     clip-path: polygon(0 0, 60% 0, 40% 100%, 0% 100%);
     /* Clip-path skaber en skæv form. Koordinaterne i polygon definerer hjørnerne:
 
@@ -191,6 +184,28 @@ input::placeholder {
 /* Hover-effekt */
 .button:hover {
     opacity: 0.8;
+}
+
+
+/* Styler diven billederne i bunden er placeret i */
+.image-buttom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centrerer billederne horisontalt */
+    background-color: #f4f4f4; /* Baggrundsfarve for at tydeliggøre sektionen (valgfri) */
+    padding: 10px;
+}
+
+
+
+/* Styler specifikt de to billeder */
+.footer-images img {
+    max-height: 100px; /* Juster højden, så billederne passer */
+    margin: 0 10px; /* Giver lidt mellemrum mellem billederne */
+    object-fit: contain; /* Sørger for korrekt skalering uden forvrængning */
 }
 
 
@@ -484,7 +499,7 @@ body {
 
 /* Formular-styling */
 form {
-    max-width: 1200px; /* Maksimal bredde. Har indsat dette, da det så meget voldsomt ud, at det fyldte hele siden, så nu er der luft på begge sider og det er samlet mere på midten. */
+    max-width: 2000px; /* Maksimal bredde. Har indsat dette, da det så meget voldsomt ud, at det fyldte hele siden, så nu er der luft på begge sider og det er samlet mere på midten. */
     margin: 0 auto; /* Centrer formularen */
     background-color: #103461; /* Baggrundsfarve til formular. Gør den samme farve som baggrundsfarven, så dette ikke er en anden farve. */
     padding: 20px;
@@ -572,4 +587,224 @@ button {
 /* Hover-effekt til knapper */
 button:hover {
     background-color: #F898A8; /* Gør, at når man trykket på en knap bliver knappen lyserød */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Evalueringsside */
+/* Generel styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4678B6;
+    color: white;
+
+}
+
+/* Container til alt indhold */
+.container4 {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #4678B6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Overskrifter */
+h3 {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Styling til knapgrupper */
+.options4 {
+    display: flex;
+    flex-wrap: wrap; /* Tillad flere linjer */
+    gap: 10px; /* Afstand mellem knapper */
+    margin-bottom: 60px; /* Afstand under hver knapgruppe */
+}
+
+.grid4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Rækker og kolonner */
+    gap: 10px;
+}
+
+.options4 button {
+    flex: 1;
+    background-color: #8692B0;
+    border: none;
+    padding: 30px 30px;
+    border-radius: 15px; /* Runder hjørnerne */
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Aktiv tilstand */
+.options4 button.active {
+    background-color: #F898A8;
+}
+
+/* Tekstfelt */
+#andet4 {
+    width: 100%;
+    min-height: 40px;
+    resize: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+/* Slider og værdi */
+.slider-container4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slider4 {
+    flex-grow: 1;
+}
+
+.slider-value4 {
+    background-color: #F898A8;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Gem-knap */
+.save-btn4 {
+    background-color: #8692B0;
+    border: none;
+    color: white;
+    border-radius: 15px; /* Runder hjørnerne */
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.save-btn4:hover {
+    background-color: #F898A8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Stempler side */
+
+/* Container til knapper */
+.button-container2 { /* Slutter med 2-tal for at seperere fra tidligere button container */
+    margin: 50px 0;
+}
+
+/* Knapper med farver */
+.zone-button2 {
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.zone-button:hover {
+    transform: scale(1.1);
+}
+
+.gray { background-color: #8692B0; }
+.light-blue { background-color: #4678B6; }
+.dark-blue { background-color: #103461; }
+.pink { background-color: #F898A8; }
+.red { background-color: #E9445F; }
+
+/* Popup baggrund */
+.popup5 { /* Slutter med 5-tal for at seperere fra tidligere popup */
+    display: none; /* Starter som skjult */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+/* Popup indhold */
+.popup-content5 { /* Slutter med 5-tal for at seperere fra tidligere popup */
+    background: white;
+    width: 300px;
+    padding: 20px;
+    margin: 10% auto;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.popup-content img {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+}
+
+/* Lukke-knap */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.close:hover {
+    color: white;
 }
