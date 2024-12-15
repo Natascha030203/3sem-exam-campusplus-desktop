@@ -1,5 +1,125 @@
 /* Forside */
 
+.image-container{
+    width: 600px
+    height: 200px
+}
+
+
+body {
+    margin: 0; /* Fjerner standard margin */
+    padding: 0; /* Fjerner standard padding */
+    height: 100vh; /* Sørger for, at body fylder hele viewportens højde */
+    background-image: url('Skærmbillede 2024-12-06 kl. 16.59.28'); /* Sti til dit baggrundsbillede */
+    background-size: cover; /* Sørger for, at billedet dækker hele skærmen */
+    background-position: center; /* Centrerer billedet */
+    background-repeat: no-repeat; /* Forhindrer gentagelse af billedet */
+    color: #fff; /* Hvid tekstfarve for bedre kontrast */
+    font-family: Arial, sans-serif; /* Standard skrifttype */
+}
+
+
+* {
+    margin: 0; /* Fjerner standardmargen */
+    padding: 0; /* Fjerner standardpadding */
+    box-sizing: border-box; /* Sørger for, at padding ikke påvirker bredden */
+    font-family: Arial, sans-serif; /* Standard font */
+}
+
+
+body {
+    background-color: #0c0b1e; /* Mørk baggrundsfarve */
+    color: #fff; /* Hvid tekstfarve */
+    display: flex; /* Bruger Flexbox for centrering */
+    justify-content: center; /* Centrerer indholdet vandret */
+    align-items: center; /* Centrerer indholdet lodret */
+    min-height: 100vh; /* Sørger for, at indholdet fylder hele højden af viewport */
+}
+
+/* ===========================
+   MAIN CONTAINER
+   =========================== */
+.container8 {
+    background-color: #6F7CA6; /* En mørkere baggrund til indholdet */
+    padding: 20px; /* Indre afstand inde i boksen */
+    border-radius: 10px; /* Afrundede hjørner */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Tilføjer en skygge for 3D-effekt */
+    text-align: center; /* Centrerer tekstindholdet */
+    width: 500%; /* Sørger for, at boksen fylder 90% af skærmens bredde */
+    max-width: 800px; /* Sætter en maksimal bredde for større skærme */
+}
+
+/* ===========================
+   HEADINGS
+   =========================== */
+h1, h2 {
+    margin-bottom: 20px; /* Lægger afstand under overskrifter */
+}
+
+/* ===========================
+   BUTTON STYLING
+   =========================== */
+button {
+    background-color: #5865f2; /* Primær blå farve til knapper */
+    color: #fff; /* Hvid tekstfarve */
+    border: none; /* Fjerner kantlinjer */
+    padding: 10px; /* Indre afstand */
+    border-radius: 5px; /* Afrundede hjørner */
+    margin-top: 10px; /* Lægger lidt afstand over knappen */
+    cursor: pointer; /* Ændrer musens markør til en hånd */
+    width: 100%; /* Sørger for, at knappen fylder hele boksen */
+}
+
+button:hover {
+    background-color: #4752c4; /* Ændrer farven ved hover */
+}
+
+
+
+form {
+    display: flex; /* Gør formularen til en flex-container */
+    flex-direction: column; /* Placerer elementerne vertikalt */
+    gap: 10px; /* Tilføjer afstand mellem inputfelter */
+    margin-top: 10px; /* Lægger afstand over formularen */
+}
+
+input {
+    padding: 10px; /* Indre afstand i inputfelterne */
+    border: none; /* Fjerner kantlinjer */
+    border-radius: 5px; /* Afrundede hjørner */
+    background-color: #2e2e4e; /* Mørk baggrundsfarve til inputfelter */
+    color: #fff; /* Hvid tekstfarve */
+}
+
+input::placeholder {
+    color: #ccc; /* Grå farve til placeholder-tekst */
+}
+
+
+
+.link {
+    color: #1A1A2E; /* Navy farve til opret dig her knap */
+    cursor: pointer; /* Ændrer musens markør til en hånd */
+    text-decoration: underline; /* Understreger teksten */
+}
+
+.link:hover {
+    color: #F898A8; /* Ændrer farven ved hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hovedside */
+
 
 /* Pink skæv forkant */
 .pink-header {

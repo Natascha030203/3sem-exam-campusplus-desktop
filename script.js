@@ -1,3 +1,61 @@
+/* ===========================
+   Forside, login og opret dig side
+   =========================== */
+
+/**
+ * Denne funktion navigerer til en ny side ved at ændre URL'en.
+ * @param {string} page - Navnet på den HTML-side, der skal åbnes.
+ */
+function goToPage(page) {
+    // Ændrer den aktuelle side til den ønskede side ved hjælp af 'window.location.href'
+    window.location.href = page;
+}
+
+/* ===========================
+   EKSTRA: VALIDERING AF FORMULAR
+   =========================== */
+
+// Tilføjer event listener til formularen på login-siden
+document.addEventListener("DOMContentLoaded", function () {
+    // Finder alle formularer i dokumentet
+    const forms = document.querySelectorAll("form");
+
+    forms.forEach((form) => {
+        // Tilføjer en eventlistener til formularens submit-knap
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Forhindrer siden i at reloade ved submission
+
+            // Finder inputfelterne i formularen
+            const inputs = form.querySelectorAll("input");
+            let allFieldsFilled = true;
+
+            // Tjekker, om alle inputfelter er udfyldt
+            inputs.forEach((input) => {
+                if (!input.value) {
+                    alert(`Udfyld venligst feltet: ${input.placeholder}`);
+                    allFieldsFilled = false;
+                }
+            });
+
+            // Hvis alle felter er udfyldt, giver besked i konsollen
+            if (allFieldsFilled) {
+                alert("Formularen blev sendt!");
+                console.log("Formularen blev sendt med følgende værdier:");
+                inputs.forEach((input) => {
+                    console.log(`${input.placeholder}: ${input.value}`);
+                });
+            }
+        });
+    });
+});
+
+
+
+
+
+
+
+// Hovedside
 document.addEventListener("DOMContentLoaded", () => {
     // Referencer til elementer
     const addQuestionButton = document.getElementById("add-question-button"); // "Indsend spørgsmål"-knap

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus+ Opret Bruger</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container8"> <!-- Kaldes container 8 istedet for container, da der allerede er et element på en anden side, der hedder continer -->
+    <h2>Opret Bruger</h2>
+    <form>
+        <label for="fuldeNavn">Fulde Navn</label>
+        <input type="text" id="fuldeNavn" placeholder="Fulde Navn" required>
+
+        <label for="email">Email Adresse</label>
+        <input type="email" id="email" placeholder="Email Adresse" required>
+
+        <label for="kodeOpret">Kode</label>
+        <input type="password" id="kodeOpret" placeholder="Kode" required>
+
+        <button type="submit">Opret Bruger</button>
+    </form>
+    <p>Har du allerede en bruger? <span onclick="goToPage('login.html')" class="link">Log ind her</span></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
