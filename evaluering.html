@@ -12,9 +12,9 @@
 <!-- Den pinke skæve firkant i toppen af siden. Er indsat her i toppen af dokumentet, så den vises øverst i dokumentet -->
 <div class="pink-header"></div>
 
-<div class="pink-header"></div> <!-- Skæve forkant -->
-<div class="container">
-    <header class="header">
+
+<div >
+    <header>
         <div class="left-section">
             <h1>Campus +</h1>
             <p>2025</p>
@@ -25,7 +25,7 @@
             </div>
         </div>
     </header>
-
+</div>
 
 
 
@@ -78,7 +78,15 @@
 
     <!-- Gem knap -->
     <button class="save-btn4" onclick="saveAndRedirect4()">Gem</button>
-</div>
+    <script>
+        function saveAndRedirect4() {
+            // Her kan du tilføje din gemme-logik, fx gemme data til en server eller lokal lagring.
+            console.log("Data gemt!"); // Midlertidig handling, fjern eller udskift med din gemme-funktion.
+
+            // Omdirigerer til hovedsiden.
+            window.location.href = "hovedside.html";
+        }
+    </script>
 
 
 <body>
@@ -86,4 +94,5 @@
 
 <script src="script.js"></script>
 </body>
+
 </html>

@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2303821c-56e6-4ec3-a9eb-af7f0cd6e997" name="Changes" comment="Din stand side er igang med at blive kodet. Er ikke færdig men er godt på vej">
-      <change afterPath="$PROJECT_DIR$/forside.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opretdig.html" afterDir="false" />
+    <list default="true" id="2303821c-56e6-4ec3-a9eb-af7f0cd6e997" name="Changes" comment="Stempler og evaluering side done. Good night :)">
+      <change afterPath="$PROJECT_DIR$/hovedside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dinstand.html" beforeDir="false" afterPath="$PROJECT_DIR$/dinstand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluering.html" beforeDir="false" afterPath="$PROJECT_DIR$/evaluering.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forside.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/forum.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
@@ -27,6 +31,9 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -53,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733399926001</updated>
-      <workItem from="1733399927090" duration="24528000" />
+      <workItem from="1733399927090" duration="48155000" />
     </task>
     <task id="LOCAL-00001" summary="Added viewport">
       <option name="closed" value="true" />
@@ -87,7 +94,31 @@
       <option name="project" value="LOCAL" />
       <updated>1734088741491</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Påbegyndt forside, login &amp; opret dig.&#10;&#10;&#10;Mangler en del styling og battler lidt med baggrundsbilledet på forsiden. Men er godr på vej.">
+      <option name="closed" value="true" />
+      <created>1734270048640</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734270048640</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Påbegyndt forside, login &amp; opret dig.&#10;&#10;&#10;Mangler en del styling og battler lidt med baggrundsbilledet på forsiden. Men er godr på vej.">
+      <option name="closed" value="true" />
+      <created>1734270066767</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1734270066767</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Stempler og evaluering side done. Good night :)">
+      <option name="closed" value="true" />
+      <created>1734300703043</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1734300703043</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +140,8 @@
     <MESSAGE value="Status søndag. Godt igang med forside og forum side. &#10;&#10;&#10;Mangler en del styling og finpudsning, men det er lykkedes at skabe en pop up boks. Det er lykkedes af lave den skæve lyserøde firkant i toppen.&#10;&#10;Indtil viderede benytter jeg javascript til forum siden, som er det der gør at boksen popper frem og tilbage. Der er kommentarer til det" />
     <MESSAGE value="Forum side: Nu er det lykkedes, at pop op boksene popper op i den farve som knappen/spørgsmålet var. Og nu fået &quot;Tilføj kommentar&quot; knappen i pop op boksen til også at poppe op i samme farve som spørgsmålet og derfor tilføjet hvid stroke omkring knappen, så den er synlig." />
     <MESSAGE value="Din stand side er igang med at blive kodet. Er ikke færdig men er godt på vej" />
-    <option name="LAST_COMMIT_MESSAGE" value="Din stand side er igang med at blive kodet. Er ikke færdig men er godt på vej" />
+    <MESSAGE value="Påbegyndt forside, login &amp; opret dig.&#10;&#10;&#10;Mangler en del styling og battler lidt med baggrundsbilledet på forsiden. Men er godr på vej." />
+    <MESSAGE value="Stempler og evaluering side done. Good night :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stempler og evaluering side done. Good night :)" />
   </component>
 </project>

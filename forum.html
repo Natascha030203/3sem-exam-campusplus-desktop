@@ -4,7 +4,7 @@
     <!-- Metadata og links -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Campus+</title>
+    <title>Forum</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,25 +20,20 @@
         <!-- Venstre sektion med titel og årstal -->
         <div class="left-section">
             <h1>Campus +</h1>
-            <p>2025</p>
+            <p id="forumtekst">forum</p>
         </div>
 
-        <!-- Højre sektion med dekorativ tekst -->
-        <div class="right-section">
-            <div class="text-box">
-                CAMPUS+
-            </div>
-        </div>
-    </header>
+
 
     <!-- Knap til at åbne popup til at indsende et nyt spørgsmål -->
     <button id="add-question-button" class="submit-question">Indsend spørgsmål</button>
 
-    <div id="forum-questions" class="questions">
-        <!-- Dynamisk tilføjede spørgsmål vil blive placeret her -->
-    </div>
+        <div id="forum-questions-container" class="questions">
+            <!-- Dynamisk tilføjede spørgsmål vil blive placeret her -->
+        </div>
 
-    <!-- Sektion med eksisterende spørgsmål -->
+
+        <!-- Sektion med eksisterende spørgsmål -->
     <div id="forum-questions" class="questions">
         <!-- Liste af spørgsmål -->
         <div class="question">Hvad tid skal man ankomme?</div>
@@ -82,10 +77,10 @@
             <button class="submit-comment">Tilføj kommentar</button>
         </div>
     </div>
-
+        <script src="script.js"></script>
 </div> <!-- Slut på container -->
 
 <!-- Link til ekstern JavaScript-fil -->
-<script src="script.js"></script>
+
 </body>
 </html>

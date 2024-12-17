@@ -1,10 +1,5 @@
 /* Forside */
 
-.image-container{
-    width: 600px
-    height: 200px
-}
-
 
 body {
     margin: 0; /* Fjerner standard margin */
@@ -45,6 +40,7 @@ body {
     text-align: center; /* Centrerer tekstindholdet */
     width: 500%; /* Sørger for, at boksen fylder 90% af skærmens bredde */
     max-width: 800px; /* Sætter en maksimal bredde for større skærme */
+    position: relative;
 }
 
 
@@ -133,23 +129,13 @@ input::placeholder {
     z-index: -1; /* Sørger for, at firkanten er bag teksten */
 }
 
-/* Velkommen til "banderet" i lyserød */
-.velkommentil {
-    background-color: #E9445F /* Boksfarven */
-    color: white; /* Tekstfarve */
-    border-radius: 0 20px 20px 0; /* Kun venstre side er afrundet */ /* Fået hjælp af chatGPT til at afrunde */
-    display: inline-block; /* Sørger for, at boksen tilpasser sig teksten */
-    font-size: 1.1rem; /* Størrelse på teksten */
-    margin-top: 30px;
-    margin-left: 250px;
-}
 
 
 /* Knapper */
 .buttons {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 20vw;
 }
 
 .button {
@@ -187,19 +173,18 @@ input::placeholder {
 }
 
 
-/* Styler diven billederne i bunden er placeret i */
-.image-buttom{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centrerer billederne horisontalt */
-    background-color: #f4f4f4; /* Baggrundsfarve for at tydeliggøre sektionen (valgfri) */
-    padding: 10px;
+#b1{
+    margin-top: 5vw;
+    width: 20vw;
+    height: 25vw;
+
 }
 
-
+#b2{
+    margin-top: 5vw;
+    width: 20vw;
+    height: 25vw;
+}
 
 /* Styler specifikt de to billeder */
 .footer-images img {
@@ -225,10 +210,20 @@ body {
     padding: 20px;
 }
 
+.header{
+    margin-top: -30vw;
+}
+
 header h1 {
-    font-size: 24px;
-    color: #d92027;
-    margin-bottom: 20px;
+    font-size: 60px;
+    color: rgba(240, 132, 149, 0.56);
+    margin-top: 50vw;
+}
+
+#forumtekst{
+    font-size: 40px;
+    margin-top: 5vw;
+    color: rgba(240, 132, 149, 0.62);
 }
 
 /* Generelle pop op-stilarter */
@@ -322,21 +317,29 @@ header h1 {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.left-section{
+    margin-top: 40vw;
+}
+
+#campus{
+    font-size: 60px;
+}
+
 /* Styling af knappen til at indsende et spørgsmål */
 .submit-question {
-    background-color: #d92027; /* Pink farve til boksen/knappen */
+    background-color: rgb(233, 68, 95); /* Pink farve til boksen/knappen */
     color: white; /* Hvid tekstfarve */
     border: none; /* Ingen kantlinje */
-    padding: 10px 20px; /* Indvendig afstand (top/bund: 10px, venstre/højre: 20px) */
+    padding: 30px 20px; /* Indvendig afstand (top/bund: 10px, venstre/højre: 20px) */
     font-size: 16px; /* Skriftstørrelse */
     cursor: pointer; /* Markør ændres til en hånd, når man peger */
-    margin-bottom: 20px; /* Afstand under knappen */
     border-radius: 20px; /* Afrunder hjørnerne med en radius på 20px */
+    margin-top: 15vw;
 }
 
 /* Layout til spørgsmålene. Der bruges grid så det passer 100% */
 .questions {
-    margin-top: 200px; /* Flytter boksene længere ned på siden, så der er mere luft til den pinke skæve firkant */
+    margin-top: 20px; /* Flytter boksene længere ned på siden, så der er mere luft til den pinke skæve firkant */
     display: grid; /* Grid-layout bruges til at arrangere/placere spørgsmålene */
     grid-template-areas: /* Definerer layoutet med navngivne områder */
             "q1 q1 q2" /* Første række: q1 strækker sig over 2 kolonner, q2 fylder én */
@@ -622,14 +625,15 @@ body {
 
 }
 
+
 /* Container til alt indhold */
 .container4 {
     max-width: 1200px;
-    margin: 20px auto;
     padding: 20px;
     background: #4678B6;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 70vw;
 }
 
 /* Overskrifter */
@@ -808,3 +812,22 @@ h3 {
 .close:hover {
     color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

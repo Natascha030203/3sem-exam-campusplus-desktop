@@ -1,88 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Campus+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus+ Forside</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 
-<style>
-    body {
-        background-color: #6F7CA6; /* Baggrundsfarve */  } /* Denne kommentar er lavet som en css, da det er styling */
-</style>
-
-
-<!-- Den pinke skæve firkant i toppen af siden. Er indsat her i toppen af dokumentet, så den vises øverst i dokumentet -->
-<div class="pink-header"></div>
-
-<div class="pink-header"></div> <!-- Skæve forkant -->
-<div class="container">
-    <header class="header">
-        <div class="left-section">
-            <h1>Campus +</h1>
-            <p>2025</p>
-        </div>
-        <div class="right-section">
-            <div class="text-box">
-                CAMPUS+
-            </div>
-        </div>
-    </header>
-
-
-    <!-- Velkommen til tekst -->
-    <div class="velkommentil">
-        Velkommen til årets sjoveste dag for de studerende!
-    </div>
-
-
-
-    <!-- Knappen der åbner "Indsend spørgsmål"-pop op-boksen -->
-    <button id="add-question-button" class="add-question-btn">Indsend spørgsmål</button>
-
-    <!-- "Indsend spørgsmål"-pop op-boks -->
-    <div id="add-question-popup" class="popup hidden">
-        <div class="popup-content">
-            <!-- Luk-knap -->
-            <button class="close">&times;</button>
-            <h2>Del dit spørgsmål med forum</h2>
-            <!-- Tekstfelt til spørgsmål -->
-            <textarea id="question-input" class="comment-input" placeholder="Skriv dit spørgsmål her..." rows="1"></textarea>
-            <!-- Knappen til at indsende spørgsmål -->
-            <button id="submit-question" class="submit-comment">Indsend</button>
-        </div>
-    </div>
-
-    <!-- Forum container, hvor spørgsmål bliver tilføjet -->
-    <div id="forum-questions" class="forum-container">
-        <!-- Spørgsmål bliver tilføjet dynamisk her -->
-    </div>
-
-
-
-
-
-    <!-- Buttons/knapper -->
-    <div class="buttons">
-        <div class="button dinstand">Din stand</div>
-        <div class="button stempler">Stempler</div>
-        <div class="button evaluering">Evaluering</div>
-        <div class="button forum">FAQ</div>
-
-    </div>
+<div class="container8"><!-- Kaldes container 8 istedet for container, da der allerede er et element på en anden side, der hedder continer -->
+    <h1>Velkommen til</h1>
+    <h2>CAMPUS+</h2>
+    <button onclick="goToPage('login.html')">Log ind med email</button>
+    <p>Har du ingen bruger? <span onclick="goToPage('opret.html')" class="link">opret dig her</span></p>
 </div>
-
-
-
-<!-- Billeder til bunden af siden -->
-<div class="image-buttom">
-    <img src="billede.jpg" alt="forsidebillede">
-    <img src="billede2.jpg" alt=forsidebillede2">
-</div>
-
 
 <script src="script.js"></script>
 </body>

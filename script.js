@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Formularen blev sendt med følgende værdier:");
                 inputs.forEach((input) => {
                     console.log(`${input.placeholder}: ${input.value}`);
+
                 });
             }
         });
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// Hovedside
+// Forumside
 document.addEventListener("DOMContentLoaded", () => {
     // Referencer til elementer
     const addQuestionButton = document.getElementById("add-question-button"); // "Indsend spørgsmål"-knap
@@ -99,6 +100,104 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Referencer til elementer
+    const addQuestionButton = document.getElementById("add-question-button"); // "Indsend spørgsmål"-knap
+    const addQuestionPopup = document.getElementById("add-question-popup"); // Pop op-boks
+    const closePopupButton = addQuestionPopup.querySelector(".close"); // Luk-knap i pop op-boksen
+    const questionInput = document.getElementById("question-input"); // Tekstfelt i pop op-boksen
+    const submitQuestionButton = document.getElementById("submit-question"); // "Tilføj spørgsmål"-knap
+    const forumQuestionsContainer = document.getElementById("forum-questions-container"); // Beholder til spørgsmål
+
+    // Åbn pop op-boksen, når "Indsend spørgsmål"-knappen klikkes
+    addQuestionButton.addEventListener("click", () => {
+        addQuestionPopup.classList.remove("hidden"); // Vis pop op-boksen
+    });
+
+    // Luk pop op-boksen, når man klikker på luk-knappen eller uden for boksen
+    addQuestionPopup.addEventListener("click", (e) => {
+        if (e.target === addQuestionPopup || e.target === closePopupButton) {
+            addQuestionPopup.classList.add("hidden"); // Skjul pop op-boksen
+        }
+    });
+
+    // Håndter indsendelse af spørgsmål
+    submitQuestionButton.addEventListener("click", () => {
+        const questionText = questionInput.value.trim(); // Hent tekstfeltets indhold
+        if (questionText) {
+            // Opret et nyt spørgsmål
+            const newQuestion = document.createElement("div");
+            newQuestion.classList.add("question");
+            newQuestion.textContent = questionText;
+
+            // Tilføj pop op-adfærd for det nye spørgsmål
+            newQuestion.addEventListener("click", () => {
+                const popup = document.createElement("div");
+                popup.classList.add("popup");
+                const popupContent = document.createElement("div");
+                popupContent.classList.add("popup-content");
+
+                const closeButton = document.createElement("span");
+                closeButton.classList.add("close");
+                closeButton.textContent = "×";
+
+                const popupQuestion = document.createElement("div");
+                popupQuestion.classList.add("popup-question");
+                popupQuestion.textContent = questionText;
+
+                const popupComments = document.createElement("div");
+                popupComments.classList.add("popup-comments");
+                popupComments.innerHTML = `
+                    <p>Alice: Ja, Campus+ sørger for både mad og drikke :)</p>
+                    <p>Jens: Jeps</p>
+                    <p>Emma-sofie: Jeg undrede mig faktisk om det samme</p>
+                `;
+
+                const commentInput = document.createElement("textarea");
+                commentInput.classList.add("comment-input");
+                commentInput.placeholder = "Skriv en kommentar...";
+
+                const submitCommentButton = document.createElement("button");
+                submitCommentButton.classList.add("submit-comment");
+                submitCommentButton.textContent = "Tilføj kommentar";
+
+                popupContent.appendChild(closeButton);
+                popupContent.appendChild(popupQuestion);
+                popupContent.appendChild(popupComments);
+                popupContent.appendChild(commentInput);
+                popupContent.appendChild(submitCommentButton);
+
+                popup.appendChild(popupContent);
+                document.body.appendChild(popup); // Tilføj popup til dokumentet
+
+                // Luk popup, når der klikkes på lukkeknappen
+                closeButton.addEventListener("click", () => {
+                    document.body.removeChild(popup); // Fjern popup fra dokumentet
+                });
+
+                // Skjul popup, hvis man klikker udenfor popup-content
+                popup.addEventListener("click", (e) => {
+                    if (e.target === popup) {
+                        document.body.removeChild(popup); // Fjern popup fra dokumentet
+                    }
+                });
+            });
+
+            // Tilføj spørgsmålet til containeren
+            forumQuestionsContainer.appendChild(newQuestion);
+
+            // Ryd tekstfeltet og luk pop op-boksen
+            questionInput.value = "";
+            addQuestionPopup.classList.add("hidden");
+        }
+    });
+});
+
+
+
+
 
 
 
@@ -230,7 +329,7 @@ function updateSliderValue4() {
 // Funktion til at gemme og omdirigere
 function saveAndRedirect4() {
     alert("Tak for din feedback!");
-    window.location.href = "index.html";
+    window.location.href = "hovedside.html";
 }
 
 
