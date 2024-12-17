@@ -6,7 +6,7 @@
  */
 function goToPage(page) {
     // Ændrer den aktuelle side til den ønskede side ved hjælp af 'window.location.href'
-    window.location.href = page;
+    window.location.href = 'hovedside.html';
 }
 
 
