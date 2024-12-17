@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2303821c-56e6-4ec3-a9eb-af7f0cd6e997" name="Changes" comment="Færdig :)" />
+    <list default="true" id="2303821c-56e6-4ec3-a9eb-af7f0cd6e997" name="Changes" comment="Færdig :)">
+      <change beforePath="$PROJECT_DIR$/dinstand.html" beforeDir="false" afterPath="$PROJECT_DIR$/dinstand.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733399926001</updated>
-      <workItem from="1733399927090" duration="49173000" />
+      <workItem from="1733399927090" duration="49569000" />
     </task>
     <task id="LOCAL-00001" summary="Added viewport">
       <option name="closed" value="true" />
@@ -139,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734429645265</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Færdig :)">
+      <option name="closed" value="true" />
+      <created>1734429684588</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734429684588</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
